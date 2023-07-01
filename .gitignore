@@ -1,0 +1,16 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+mocks
+script
+
+public
+.eslintcache
+package-lock.json
+yarn-error.log
+.pnpm-debug.log
+script
+
+*.npmrc
