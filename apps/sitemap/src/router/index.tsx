@@ -6,6 +6,11 @@ export enum RoutePath {
   blog = "http://blog.smallstars.top",
   cron = "http://cron.smallstars.top",
   demo = "http://demo.smallstars.top",
+
+  githubSitemap = "https://smaiistars.github.io",
+  githubBlog = "https://smaiistars.github.io/myblog",
+  githubCron = "https://smaiistars.github.io/cron",
+  githubDemo = "https://smaiistars.github.io/demo",
 }
 
 // router type
@@ -25,6 +30,11 @@ const routes: RouterConfig[] = [
   { type: "website", title: "sitemap", link: RoutePath.sitemap },
   { type: "website", title: "cron", link: RoutePath.cron },
   { type: "website", title: "demo", link: RoutePath.demo },
+
+  { type: "website", title: "githubSitemap", link: RoutePath.githubBlog },
+  { type: "website", title: "githubBlog", link: RoutePath.githubSitemap },
+  { type: "website", title: "githubCron", link: RoutePath.githubCron },
+  { type: "website", title: "githubDemo", link: RoutePath.githubDemo },
 ];
 
 export default routes;

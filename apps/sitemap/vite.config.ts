@@ -17,4 +17,9 @@ export default defineConfig({
   build: {
     outDir: "sitemap",
   },
+  css: {
+    modules: {
+      localsConvention: "camelCase",
+    },
+  },
 });

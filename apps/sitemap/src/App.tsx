@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import SitemapItem from "@/components/sitemap-item";
 import routes, { RouteType, RouterConfig } from "@/router";
-import styles from "./index.scss";
+import styles from "./index.module.scss";
 
 const App = () => {
   const typeRoutes = useMemo(() => {

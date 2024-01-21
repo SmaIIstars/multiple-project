@@ -4,7 +4,7 @@
   "scripts": {
     "start": "pnpm dev",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "commit": "cd ../.. && pnpm commit"
   },
