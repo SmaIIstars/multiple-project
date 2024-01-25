@@ -9,8 +9,8 @@ export enum RoutePath {
 
   githubSitemap = "https://smaiistars.github.io",
   githubBlog = "https://smaiistars.github.io/myblog",
-  githubCron = "https://smaiistars.github.io/cron",
-  githubDemo = "https://smaiistars.github.io/demo",
+  githubCron = "https://smaiistars.github.io/cron-expression",
+  githubDemo = "https://smaiistars.github.io/react-demo",
 }
 
 // router type

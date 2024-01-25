@@ -1,0 +1,45 @@
+.content-slider {
+  &-wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-list {
+    display: flex;
+  }
+
+  &-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-indictor-area {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 300px;
+
+    &-left {
+      left: 0;
+
+      &:hover {
+        cursor: url("./cursor/arrow-left-white.svg") 40 40, pointer;
+      }
+      &:active {
+        cursor: url("./cursor/arrow-left-black.svg") 40 40, pointer;
+      }
+    }
+    &-right {
+      right: 0;
+
+      &:hover {
+        cursor: url("./cursor/arrow-right-white.svg") 40 40, pointer;
+      }
+      &:active {
+        cursor: url("./cursor/arrow-right-black.svg") 40 40, pointer;
+      }
+    }
+  }
+}
