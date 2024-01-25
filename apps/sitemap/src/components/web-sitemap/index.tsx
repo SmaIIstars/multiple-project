@@ -3,31 +3,34 @@ import classnames from "classnames";
 
 import { formatTimestamp } from "@/utils/time";
 import { SECOND_FORMAT } from "@/utils/time/constant";
-import SitemapConfig from "@/constant/config";
 import styles from "./style.module.scss";
 
-import { SITE_TYPE, SitemapResource } from "./config";
+import { SITE_TYPE, SitemapResource } from "./types";
 
 const lastUpdateDate = formatTimestamp(
   new Date().getTime() / 1000,
   SECOND_FORMAT
 );
-const Sitemap = () => {
-  const { siteName, siteUri, sitemaps } = SitemapConfig;
+
+export type WebSitemapProps = {
+  siteName: string;
+  siteUri: string;
+  sitemaps: SitemapResource[];
+};
+
+const Sitemap = (props: WebSitemapProps) => {
+  const { siteName, sitemaps } = props;
 
   const data = useMemo(() => {
-    const resourceMap: Record<Partial<SITE_TYPE>, SitemapResource[]> = {
-      [SITE_TYPE.APP]: [],
-      [SITE_TYPE.POST]: [],
-      [SITE_TYPE.RESOURCE]: [],
-    };
+    const resourceMap: Partial<Record<SITE_TYPE, SitemapResource[]>> = {};
 
     sitemaps.forEach((siteItem) => {
-      const curResource = Reflect.get(resourceMap, siteItem.type);
-      if (!siteItem.type) {
-        Reflect.set(resourceMap, siteItem.type, [curResource]);
+      if (!siteItem.type) return;
+
+      const curTypeResourceList = Reflect.get(resourceMap, siteItem.type);
+      if (!curTypeResourceList) {
+        Reflect.set(resourceMap, siteItem.type, [siteItem]);
       } else {
-        const curTypeResourceList = Reflect.get(resourceMap, siteItem.type);
         curTypeResourceList.push(siteItem);
       }
     });
@@ -56,6 +59,17 @@ const Sitemap = () => {
                     return (
                       <li key={siteItem.name}>
                         <a href={siteItem.link}>{siteItem.name}</a>
+                        {siteItem.backupLinks?.map((link, idx) => {
+                          return (
+                            <a
+                              href={link}
+                              key={link}
+                              className={styles.sitemapItemBackupLink}
+                            >
+                              {`BackupLink${idx + 1}`}
+                            </a>
+                          );
+                        })}
                       </li>
                     );
                   })}

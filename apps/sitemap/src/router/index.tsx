@@ -2,13 +2,13 @@ import React from "react";
 import { RouteProps } from "react-router-dom";
 
 export enum RoutePath {
-  sitemap = "http://smallstars.top",
   blog = "http://blog.smallstars.top",
+  sitemap = "http://smallstars.top",
   cron = "http://cron.smallstars.top",
   demo = "http://demo.smallstars.top",
 
-  githubSitemap = "https://smaiistars.github.io",
   githubBlog = "https://smaiistars.github.io/myblog",
+  githubSitemap = "https://smaiistars.github.io",
   githubCron = "https://smaiistars.github.io/cron-expression",
   githubDemo = "https://smaiistars.github.io/react-demo",
 }
