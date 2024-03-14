@@ -15,6 +15,7 @@ import Test from "@/pages/test";
 import ThreeJs from "@/pages/three-js";
 import TimeLine from "@/pages/time-line";
 import WebSitemap from "@/pages/web-sitemap";
+import SpecifyText from "@/pages/specify-text";
 import { BASENAME } from "@/constant";
 
 // meta Type
@@ -54,6 +55,8 @@ const routes = [
   // { path: "/three-js", element: () => <ThreeJs /> },
   { path: "/time-line", element: () => <TimeLine /> },
   { path: "/web-sitemap", element: () => <WebSitemap /> },
+  { path: "/specify-text", element: () => <SpecifyText /> },
+
   {
     path: "*",
     element: () => <Navigate replace to="/web-sitemap" />,

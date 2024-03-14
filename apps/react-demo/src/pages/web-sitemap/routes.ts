@@ -22,6 +22,7 @@ const sitemapMap: Partial<Record<SITE_TYPE, SitemapResource[]>> = {
     { name: "ThreeJs", link: "/three-js" },
     { name: "TimeLine", link: "/time-line" },
     { name: "WebSitemap", link: "/web-sitemap" },
+    { name: "SpecifyText", link: "/specify-text" },
   ],
 };
 

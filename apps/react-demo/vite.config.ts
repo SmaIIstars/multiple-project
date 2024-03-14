@@ -35,7 +35,11 @@ export default defineConfig({
       },
     },
   },
-
+  css: {
+    modules: {
+      localsConvention: "camelCase",
+    },
+  },
   build: {
     outDir: "react-demo",
   },

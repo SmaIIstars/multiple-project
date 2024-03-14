@@ -146,6 +146,9 @@ importers:
       socket.io-client:
         specifier: ^4.5.1
         version: 4.5.1
+      specify-text:
+        specifier: ^0.0.4
+        version: 0.0.4(react-dom@18.2.0)(react@18.2.0)
       swiper:
         specifier: ^11.0.3
         version: 11.0.3
@@ -4689,6 +4692,16 @@ packages:
     engines: {node: '>=0.10.0'}
     requiresBuild: true
     optional: true
+
+  /specify-text@0.0.4(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-i4WIAlAVQh42RCL+F1Huz6t1KPuIUzxV3Ptv8/fvb+ygoG63XGDqqmfkKYrxYFef5msVXZtI4xsMvgKdVdnbtQ==}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
 
   /split-on-first@1.1.0:
     resolution: {integrity: sha512-43ZssAJaMusuKWL8sKUBQXHWOpq8d6CfN/u1p4gUzfJkM05C8rxTmYrkIPTXapZpORA6LkkzcUulJ8FqA7Uudw==}
