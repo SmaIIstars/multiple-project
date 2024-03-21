@@ -1,4 +1,4 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 import cls from "classnames";
 import configs from "../../config";
 
@@ -6,8 +6,16 @@ import SpecifyText from "../specify-text-custom";
 
 import styles from "./index.module.less";
 import "specify-text/style";
+import { getSizeBasedOnScreenWidth } from "../../utils";
+import useResize from "../../hooks/resize";
 
 const SpecifyTextExample = () => {
+  const [screenSize, setScreenSize] = useState<number>(1);
+
+  useResize(() => {
+    setScreenSize(getSizeBasedOnScreenWidth());
+  });
+
   return (
     <>
       <h1 className={styles.specifyTextTitle}>SpecifyText Example</h1>
@@ -35,7 +43,7 @@ const SpecifyTextExample = () => {
                   [styles.specifyTextExampleTextCenter]: idx,
                 })}
               >
-                {text.replace("\n", "\\n")}
+                {JSON.stringify(text).slice(1, -1)}
               </div>
 
               <div
@@ -44,7 +52,12 @@ const SpecifyTextExample = () => {
                   styles.specifyTextExampleDev
                 )}
               >
-                {devConfig && <SpecifyText {...devConfig} />}
+                {devConfig && (
+                  <SpecifyText
+                    {...devConfig}
+                    conditionalMap={{ [`screenSize${screenSize}`]: true }}
+                  />
+                )}
               </div>
             </React.Fragment>
           );

@@ -4,6 +4,7 @@ import linkConfig from "./link";
 import colorfulConfig from "./colorful";
 import italicsConfig from "./italics";
 import normalConfig from "./normal";
+import conditionalConfig from "./conditional";
 
 const exampleConfigs = [
   headerConfig,
@@ -11,7 +12,7 @@ const exampleConfigs = [
   linkConfig,
   colorfulConfig,
   italicsConfig,
-  normalConfig,
+  normalConfig,conditionalConfig
 ];
 
 export default exampleConfigs;

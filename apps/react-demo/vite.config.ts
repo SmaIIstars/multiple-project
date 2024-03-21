@@ -42,5 +42,6 @@ export default defineConfig({
   },
   build: {
     outDir: "react-demo",
+    sourcemap: true,
   },
 });

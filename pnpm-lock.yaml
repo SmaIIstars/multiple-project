@@ -147,8 +147,8 @@ importers:
         specifier: ^4.5.1
         version: 4.5.1
       specify-text:
-        specifier: ^0.0.4
-        version: 0.0.4(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^0.0.5
+        version: 0.0.5(react-dom@18.2.0)(react@18.2.0)
       swiper:
         specifier: ^11.0.3
         version: 11.0.3
@@ -4693,8 +4693,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /specify-text@0.0.4(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-i4WIAlAVQh42RCL+F1Huz6t1KPuIUzxV3Ptv8/fvb+ygoG63XGDqqmfkKYrxYFef5msVXZtI4xsMvgKdVdnbtQ==}
+  /specify-text@0.0.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-CFrCaFYapc+bGTm0feS4JpM0GKc5XySG9klTOMtezfl8vpKMSMEZ3PRSLqiyAjVLX8eh+lzeEPbH8aEQSYNAMA==}
     peerDependencies:
       react: '>=16'
       react-dom: '>=16'
