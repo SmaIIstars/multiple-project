@@ -9,22 +9,27 @@ const sitemapMap: Partial<Record<SITE_TYPE, SitemapResource[]>> = {
     {
       name: "blog",
       link: "http://blog.smallstars.top",
-      backupLinks: ["https://smaiistars.github.io/myblog"],
+      backupLinks: ["https://www.smallstars.top/myblog"],
     },
     {
       name: "sitemap",
       link: "http://smallstars.top",
-      backupLinks: ["https://smaiistars.github.io"],
+      backupLinks: ["https://www.smallstars.top"],
     },
     {
       name: "cron",
       link: "http://cron.smallstars.top",
-      backupLinks: ["https://smaiistars.github.io/cron-expression"],
+      backupLinks: ["https://www.smallstars.top/cron-expression"],
+    },
+    {
+      name: "specify-text",
+      link: "http://www.smallstars.top/specify-text",
+      backupLinks: [],
     },
     {
       name: "demo",
       link: "http://demo.smallstars.top",
-      backupLinks: ["https://smaiistars.github.io/react-demo"],
+      backupLinks: ["https://www.smallstars.top/react-demo"],
     },
   ],
 };
