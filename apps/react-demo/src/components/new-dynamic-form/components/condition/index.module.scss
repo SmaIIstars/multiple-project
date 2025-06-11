@@ -1,0 +1,57 @@
+.condition {
+  &-item {
+    &-wrapper {
+      display: flex;
+      flex-flow: column;
+      row-gap: 12px;
+    }
+  }
+
+  &-group {
+    &-wrapper {
+      background-color: #f7f9fa;
+      padding: 12px 16px;
+      border-radius: 8px;
+    }
+    &-header {
+      display: flex;
+      margin-block-end: 12px;
+    }
+
+    &-name {
+      flex: 1;
+    }
+  }
+
+  &-group-item {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 16px;
+
+    &-wrapper {
+      display: flex;
+      row-gap: 12px;
+    }
+
+    &-bracket {
+      position: relative;
+      width: 36px;
+      border-radius: 24px;
+      border-left: 1px solid #ccc;
+      margin-inline-start: 6px;
+    }
+
+    &-content {
+      display: flex;
+      flex-flow: column;
+    }
+  }
+
+  &-logic-type {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f7f9fa;
+  }
+}

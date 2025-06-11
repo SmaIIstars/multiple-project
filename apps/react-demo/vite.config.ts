@@ -1,12 +1,19 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+import { defineConfig } from "vite";
 import { viteMockServe } from "vite-plugin-mock";
+import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   base: "/react-demo",
   plugins: [
     react(),
+    svgr({
+      include: "**/*.svg",
+      svgrOptions: {
+        icon: true,
+      },
+    }),
     viteMockServe({
       mockPath: "./src/mock",
       logger: true,
@@ -38,6 +45,7 @@ export default defineConfig({
   css: {
     modules: {
       localsConvention: "camelCase",
+      scopeBehaviour: "local",
     },
   },
   build: {

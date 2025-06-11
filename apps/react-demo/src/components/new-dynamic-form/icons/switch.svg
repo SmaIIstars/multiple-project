@@ -1,0 +1,27 @@
+<svg width="88" height="80" viewBox="0 0 88 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="88" height="80" rx="7" fill="var(--genie-color-bg-container)" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M17 28C17 24.6863 19.681 22 23.0037 22H31.9963C35.3121 22 38 24.693 38 28C38 31.3137 35.319 34 31.9963 34H23.0037C19.6879 34 17 31.3159 17 28Z"
+    fill="var(--ant-color-primary)" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M32 32.5C34.4853 32.5 36.5 30.4853 36.5 28C36.5 25.5147 34.4853 23.5 32 23.5C29.5147 23.5 27.5 25.5147 27.5 28C27.5 30.4853 29.5147 32.5 32 32.5Z"
+    fill="var(--ant-color-bg-container)" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M50 28C50 24.6863 52.681 22 56.0037 22H64.9963C68.3121 22 71 24.693 71 28C71 31.3137 68.319 34 64.9963 34H56.0037C52.6879 34 50 31.3159 50 28Z"
+    fill="var(--ant-color-text)" fill-opacity="0.15" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M56 32.5C58.4853 32.5 60.5 30.4853 60.5 28C60.5 25.5147 58.4853 23.5 56 23.5C53.5147 23.5 51.5 25.5147 51.5 28C51.5 30.4853 53.5147 32.5 56 32.5Z"
+    fill="var(--ant-color-bg-container)" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M17 52C17 48.6863 19.681 46 23.0037 46H31.9963C35.3121 46 38 48.693 38 52C38 55.3137 35.319 58 31.9963 58H23.0037C19.6879 58 17 55.3159 17 52Z"
+    fill="var(--ant-color-primary)" fill-opacity="0.5" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M32 56.5C34.4853 56.5 36.5 54.4853 36.5 52C36.5 49.5147 34.4853 47.5 32 47.5C29.5147 47.5 27.5 49.5147 27.5 52C27.5 54.4853 29.5147 56.5 32 56.5Z"
+    fill="var(--ant-color-bg-container)" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M50 52C50 48.6863 52.681 46 56.0037 46H64.9963C68.3121 46 71 48.693 71 52C71 55.3137 68.319 58 64.9963 58H56.0037C52.6879 58 50 55.3159 50 52Z"
+    fill="var(--ant-color-text)" fill-opacity="0.06" />
+  <path fill-rule="evenodd" clip-rule="evenodd"
+    d="M56 56.5C58.4853 56.5 60.5 54.4853 60.5 52C60.5 49.5147 58.4853 47.5 56 47.5C53.5147 47.5 51.5 49.5147 51.5 52C51.5 54.4853 53.5147 56.5 56 56.5Z"
+    fill="var(--ant-color-bg-container)" />
+</svg>

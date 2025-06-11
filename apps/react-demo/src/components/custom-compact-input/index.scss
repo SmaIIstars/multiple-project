@@ -1,0 +1,15 @@
+.custom-compact-input {
+  &-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 8px;
+  }
+
+  &-item {
+    &-wrapper {
+      display: flex;
+      flex-flow: column wrap;
+      gap: 8px;
+    }
+  }
+}

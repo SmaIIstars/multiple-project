@@ -1,0 +1,37 @@
+.list {
+  &-drop-area {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    background-color: #e6f7ff;
+    border-radius: 8px;
+    border: 1px dashed #3278d9;
+    color: #3278d9;
+  }
+
+  &-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &-item {
+    &-container {
+      display: flex;
+    }
+
+    &-container-inner {
+      flex: 1;
+    }
+
+    &-delete-button {
+      margin-block-start: 12px;
+    }
+  }
+}

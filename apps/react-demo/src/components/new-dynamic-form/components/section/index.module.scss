@@ -1,0 +1,53 @@
+.section {
+  &-wrapper {
+    position: relative;
+    border-top: 1px solid #eaecef;
+    border-radius: unset;
+  }
+
+  &-header {
+    &-wrapper {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    &-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+
+    &-delete-icon {
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  &-form-item-wrapper {
+    :global {
+      .ant-form-item-vertical,
+      .ant-form-item-control {
+        flex: auto;
+      }
+    }
+  }
+
+  &-item {
+    &-wrapper {
+      // min-height: 100px;
+    }
+  }
+
+  &-drop-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    background-color: var(--genie-color-bg-container);
+    border-radius: 8px;
+    border: 1px dashed var(--ant-color-primary);
+    color: var(--ant-color-primary);
+  }
+}

@@ -1,0 +1,57 @@
+.component-wrapper {
+  position: relative;
+  width: 100%;
+
+  &-item {
+    margin: 0px;
+    padding: 0 8px;
+
+    &-wrapper {
+      margin: 8px 4px;
+      padding: 4px;
+      border-radius: 8px;
+      &-disabled {
+        opacity: 0.3;
+      }
+
+      &:hover {
+        .component-wrapper-delete {
+          opacity: 1;
+        }
+      }
+    }
+    &-active {
+      background-color: var(--genie-color-bg-container);
+    }
+  }
+
+  &-delete {
+    position: absolute;
+    top: 0px;
+    right: 16px;
+    z-index: 1;
+    opacity: 0;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  &-visible {
+    border-radius: 8px;
+    border: 1px dashed black;
+  }
+
+  &-not-visible {
+    border-radius: 8px;
+    height: 0px;
+    overflow: hidden;
+    border: 1px dashed gray;
+
+    // background-color: red;
+
+    &:nth-child(n) {
+      margin-top: 8px;
+    }
+  }
+}

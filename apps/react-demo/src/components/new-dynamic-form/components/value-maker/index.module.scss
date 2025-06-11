@@ -1,0 +1,17 @@
+.value-maker {
+  &-wrapper {
+    // width: 20% !important;
+  }
+
+  &-name {
+    width: 25%;
+  }
+
+  &-selector {
+    width: auto;
+  }
+
+  &-value-wrapper {
+    overflow: hidden;
+  }
+}

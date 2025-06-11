@@ -1,0 +1,15 @@
+.dynamic-form {
+  &-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+
+    width: 100%;
+  }
+
+  &-item-render-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--genie-color-bg-container);
+  }
+}

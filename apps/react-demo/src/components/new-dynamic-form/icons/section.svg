@@ -1,0 +1,16 @@
+<svg width="88" height="80" viewBox="0 0 88 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="88" height="80" rx="7" fill="var(--genie-color-bg-container)" />
+  <rect x="8.5" y="58.5" width="70" height="13" rx="1.5" fill="var(--ant-color-bg-container)"
+    stroke="var(--ant-color-border)" />
+  <rect x="8.5" y="14.5" width="70" height="35" rx="1.5" fill="var(--ant-color-bg-container)"
+    stroke="var(--ant-color-border)" />
+  <rect x="8.5" y="26.5" width="70" height="23" fill="var(--genie-color-bg-container)"
+    stroke="var(--ant-color-primary)" />
+  <path d="M12 62L15 65L12 68" stroke="var(--ant-color-text)" stroke-opacity="0.2" />
+  <path d="M16 18L13 21L10 18" stroke="var(--ant-color-text)" stroke-opacity="0.2" />
+  <rect x="19" y="62" width="20" height="6" fill="var(--ant-color-primary)" />
+  <rect x="19" y="17" width="20" height="6" fill="var(--ant-color-primary)" />
+  <rect x="12" y="29" width="63" height="4" fill="var(--ant-color-bg-elevated)" />
+  <rect x="12" y="36" width="63" height="4" fill="var(--ant-color-bg-elevated)" />
+  <rect x="12" y="43" width="36" height="4" fill="var(--ant-color-bg-elevated)" />
+</svg>

@@ -1,0 +1,14 @@
+<svg width="88" height="80" viewBox="0 0 88 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="88" height="80" rx="7" fill="var(--genie-color-bg-container)" />
+  <rect x="7" y="40" width="72" height="4" rx="2" fill="var(--ant-color-border)" />
+  <rect x="7" y="40" width="35" height="4" rx="2" fill="var(--ant-color-primary)" />
+  <path
+    d="M47.0018 35.0003C50.8688 35.0003 54.0036 38.1351 54.0036 42.0021C54.0036 45.8691 50.8688 49.0039 47.0018 49.0039C43.1348 49.0039 40 45.8691 40 42.0021C40 38.1351 43.1348 35.0003 47.0018 35.0003Z"
+    fill="var(--ant-color-bg-container)" />
+  <path
+    d="M47.0018 35.0003C50.8688 35.0003 54.0036 38.1351 54.0036 42.0021C54.0036 45.8691 50.8688 49.0039 47.0018 49.0039C43.1348 49.0039 40 45.8691 40 42.0021C40 38.1351 43.1348 35.0003 47.0018 35.0003Z"
+    fill="var(--ant-color-primary)" />
+  <path
+    d="M47 38C49.2091 38 51 39.7909 51 42C51 44.2091 49.2091 46 47 46C44.7909 46 43 44.2091 43 42C43 39.7909 44.7909 38 47 38Z"
+    fill="var(--ant-color-bg-container)" />
+</svg>

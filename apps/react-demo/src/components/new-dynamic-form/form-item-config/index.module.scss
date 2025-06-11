@@ -1,0 +1,26 @@
+.dynamic-form-item-config {
+  &-wrapper {
+    :global {
+      .ant-form-horizontal,
+      .ant-form-item-control {
+        flex: auto;
+      }
+    }
+  }
+
+  &-header {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding: 10px 16px;
+    text-transform: capitalize;
+  }
+
+  &-collapse {
+    &-item-title {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+    }
+  }
+}
