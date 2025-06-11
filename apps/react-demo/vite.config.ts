@@ -9,9 +9,12 @@ export default defineConfig({
   plugins: [
     react(),
     svgr({
-      include: "**/*.svg",
       svgrOptions: {
         icon: true,
+        exportType: "default",
+        ref: true,
+        svgo: false,
+        titleProp: true,
       },
     }),
     viteMockServe({
