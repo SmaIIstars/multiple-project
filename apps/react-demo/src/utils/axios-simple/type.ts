@@ -1,10 +1,16 @@
-import { AxiosRequestConfig, AxiosResponse } from 'axios';
+import {
+  AxiosRequestConfig,
+  AxiosResponse,
+  InternalAxiosRequestConfig,
+} from "axios";
 
-// 实例拦截器
+// Instance
 export interface RequestInterceptors<T = AxiosResponse> {
-  requestInterceptor?: (config: AxiosRequestConfig) => AxiosRequestConfig;
+  requestInterceptor?: (
+    config: AxiosRequestConfig
+  ) => InternalAxiosRequestConfig;
   requestInterceptorCatch?: (err: any) => any;
-  responseInterceptor?: (config: T) => T;
+  responseInterceptor?: (config: AxiosResponse<T>) => AxiosResponse<T>;
   responseInterceptorCatch?: (err: any) => any;
 }
 

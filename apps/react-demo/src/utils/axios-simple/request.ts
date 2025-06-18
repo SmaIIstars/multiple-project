@@ -1,8 +1,6 @@
-import axios from 'axios';
-// type
-import { AxiosInstance } from 'axios';
-import { RequestInterceptors, RequestConfig } from './type';
-import { GLOBAL_INTERCEPTORS } from './config';
+import axios, { AxiosInstance, AxiosResponse } from "axios";
+import { GLOBAL_INTERCEPTORS } from "./config";
+import { RequestConfig, RequestInterceptors } from "./type";
 
 class BaseRequest {
   instance: AxiosInstance;
@@ -11,7 +9,7 @@ class BaseRequest {
   constructor(config: RequestConfig) {
     this.instance = axios.create(config);
 
-    // 全局拦截器
+    // Global
     this.instance.interceptors.request.use(
       GLOBAL_INTERCEPTORS.REQUEST_INTERCEPTOR,
       GLOBAL_INTERCEPTORS.REQUEST_INTERCEPTOR_CATCH
@@ -21,7 +19,7 @@ class BaseRequest {
       GLOBAL_INTERCEPTORS.RESPONSE_INTERCEPTOR_CATCH
     );
 
-    // 实例拦截器
+    // Instance
     this.interceptors = config.interceptors;
     this.instance.interceptors.request.use(
       this.interceptors?.requestInterceptor,
@@ -33,42 +31,47 @@ class BaseRequest {
     );
   }
 
-  request<T>(config: RequestConfig<T>): Promise<T> {
+  request<T>(config: RequestConfig<T>): Promise<AxiosResponse<T>> {
     return new Promise((resolve, reject) => {
-      // 单独请求拦截器
+      // single request
       if (config.interceptors?.requestInterceptor) {
         config = config.interceptors.requestInterceptor(config);
       }
-      // 发起请求
+
       this.instance
-        .request<any, T>(config)
+        .request<any, AxiosResponse<T>>(config)
         .then((res) => {
-          // 单独响应拦截器
+          // single response
           if (config.interceptors?.responseInterceptor) {
             res = config.interceptors.responseInterceptor(res);
           }
           resolve(res);
         })
         .catch((err) => {
-          reject(err);
+          // single response
+          if (config.interceptors?.responseInterceptor) {
+            config?.interceptors?.responseInterceptorCatch?.(err);
+          } else {
+            reject(err instanceof Error ? err : new Error(String(err)));
+          }
         });
     });
   }
 
-  get<T>(config: RequestConfig<T>): Promise<T> {
-    return this.request<T>({ ...config, method: 'GET' });
+  get<T>(config: RequestConfig<T>): Promise<AxiosResponse<T>> {
+    return this.request<T>({ ...config, method: "GET" });
   }
 
-  post<T>(config: RequestConfig<T>): Promise<T> {
-    return this.request<T>({ ...config, method: 'POST' });
+  post<T>(config: RequestConfig<T>): Promise<AxiosResponse<T>> {
+    return this.request<T>({ ...config, method: "POST" });
   }
 
-  delete<T>(config: RequestConfig<T>): Promise<T> {
-    return this.request<T>({ ...config, method: 'DELETE' });
+  delete<T>(config: RequestConfig<T>): Promise<AxiosResponse<T>> {
+    return this.request<T>({ ...config, method: "DELETE" });
   }
 
-  patch<T>(config: RequestConfig<T>): Promise<T> {
-    return this.request<T>({ ...config, method: 'PATCH' });
+  patch<T>(config: RequestConfig<T>): Promise<AxiosResponse<T>> {
+    return this.request<T>({ ...config, method: "PATCH" });
   }
 }
 
